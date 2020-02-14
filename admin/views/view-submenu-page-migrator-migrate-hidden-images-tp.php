@@ -2,7 +2,7 @@
 
 <div class="dpsp-page-wrapper dpsp-page-settings wrap">
 
-	<h1><?php echo __( 'Migration Tool: Tasty Pins to Social Pug', 'social-pug' ); ?></h1>
+	<h1><?php echo __( 'Migration Tool: Tasty Pins to Grow by Mediavine', 'social-pug' ); ?></h1>
 
 	<br />
 

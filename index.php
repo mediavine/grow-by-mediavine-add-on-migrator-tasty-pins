@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Social Pug - Tasty Pins Migrator
- * Plugin URI: http://www.devpups.com/social-pug/
- * Description: Migrates Tasty Pins Pinterest images and descriptions to Social Pug
+ * Plugin Name: Grow by Mediavine - Tasty Pins Migrator
+ * Plugin URI: http://www.marketplace.mediavine.com
+ * Description: Migrates Tasty Pins Pinterest images and descriptions to Grow by Mediavine
  * Version: 1.0.0
- * Author: DevPups
+ * Author: Mediavine
  * Text Domain: social-pug
- * Author URI: http://www.devpups.com/
+ * Author URI: http://www.mediavine.com/
  * License: GPL2
  */
 
@@ -30,7 +30,7 @@ add_action( 'init', 'dpsp_migrator_load_files_tasty_pins' );
 
 /**
  * Searches the post meta table for the Tasty Pins hidden images and Pinterest description and if it finds something
- * it adds it to what Social Pug has saved
+ * it adds it to what Grow by Mediavine has saved
  *
  */
 function dpsp_migrator_migrate_hidden_images_tp() {
@@ -119,7 +119,7 @@ function dpsp_migrator_migrate_hidden_images_tp() {
 	} else {
 
 		echo '<script type="text/javascript">';
-			echo 'jQuery(window).load( function() { window.location.replace("' . add_query_arg( array( 'page' => 'dpsp-migrator', 'dpsp_message_class' => 'updated', 'message' => urlencode( sprintf( __( 'Pinterest hidden images and default Pinterest texts for %d posts have been migrated to Social Pug.', 'social-pug' ), $posts_updated ) ) ), admin_url( 'admin.php' ) ) . '") })';
+			echo 'jQuery(window).load( function() { window.location.replace("' . add_query_arg( array( 'page' => 'dpsp-migrator', 'dpsp_message_class' => 'updated', 'message' => urlencode( sprintf( __( 'Pinterest hidden images and default Pinterest texts for %d posts have been migrated to Grow by Mediavine.', 'social-pug' ), $posts_updated ) ) ), admin_url( 'admin.php' ) ) . '") })';
 		echo '</script>';
 
 	}
@@ -129,7 +129,7 @@ function dpsp_migrator_migrate_hidden_images_tp() {
 
 /**
  * Searches the post meta table for the Tasty Pins pin description and repin ID data, if it finds something
- * it adds it to the images as Social Pug uses it
+ * it adds it to the images as Grow by Mediavine uses it
  *
  */
 function dpsp_migrator_migrate_images_pin_data_tp() {
@@ -213,7 +213,7 @@ function dpsp_migrator_migrate_images_pin_data_tp() {
 	} else {
 
 		echo '<script type="text/javascript">';
-			echo 'jQuery(window).load( function() { window.location.replace("' . add_query_arg( array( 'page' => 'dpsp-migrator', 'dpsp_message_class' => 'updated', 'message' => urlencode( sprintf( __( 'Pin data for %d images have been migrated to Social Pug.', 'social-pug' ), $posts_updated ) ) ), admin_url( 'admin.php' ) ) . '") })';
+			echo 'jQuery(window).load( function() { window.location.replace("' . add_query_arg( array( 'page' => 'dpsp-migrator', 'dpsp_message_class' => 'updated', 'message' => urlencode( sprintf( __( 'Pin data for %d images have been migrated to Grow by Mediavine.', 'social-pug' ), $posts_updated ) ) ), admin_url( 'admin.php' ) ) . '") })';
 		echo '</script>';
 
 	}
