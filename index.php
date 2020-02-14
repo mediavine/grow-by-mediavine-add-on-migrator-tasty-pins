@@ -3,7 +3,7 @@
  * Plugin Name: Grow by Mediavine - Tasty Pins Migrator
  * Plugin URI: http://www.marketplace.mediavine.com
  * Description: Migrates Tasty Pins Pinterest images and descriptions to Grow by Mediavine
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Mediavine
  * Text Domain: social-pug
  * Author URI: http://www.mediavine.com/
