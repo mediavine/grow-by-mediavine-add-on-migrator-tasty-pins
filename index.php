@@ -143,7 +143,7 @@ function dpsp_migrator_migrate_images_pin_data_tp() {
 	$results = array();
 
 	// Grab the hidden images
-	$results = $wpdb->get_results( "SELECT * FROM {$wpdb->postmeta} WHERE ( meta_key = 'tp_pinterest_text' OR meta_key = 'tp_pinterest_repin_id' )", ARRAY_A );
+	$results = $wpdb->get_results( "SELECT * FROM {$wpdb->postmeta} WHERE ( meta_key = 'tp_pinterest_title' OR meta_key = 'tp_pinterest_text' OR meta_key = 'tp_pinterest_repin_id' )", ARRAY_A );
 
 	// Exit if no data was found
 	if( empty( $results ) ) {
@@ -178,8 +178,11 @@ function dpsp_migrator_migrate_images_pin_data_tp() {
 	}
 
 	$_arr = array_slice( $arr, $posts_updated, 20, true );
-
 	foreach( $_arr as $post_id => $meta_data ) {
+		if ( ! empty( $meta_data['tp_pinterest_title'] ) ) {
+			$pinterest_title = sanitize_text_field( $meta_data['tp_pinterest_title'] );
+			update_metadata( 'post', $post_id, 'pin_title', $pinterest_title );
+		}
 
 		// Update the image Pinterest description
 		if( ! empty( $meta_data['tp_pinterest_text'] ) ) {
