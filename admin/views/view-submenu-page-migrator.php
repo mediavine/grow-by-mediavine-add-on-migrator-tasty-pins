@@ -7,7 +7,7 @@
 	<!-- Single Post Hidden Images and Pinterest description -->
 	<div class="dpsp-tool-wrapper">
 
-		<h4 style="text-align: left; padding: 15px;"><span class="dashicons dashicons-format-gallery" style="margin-right: 10px;"></span><?php echo __( "Single Post Pinterest Hidden Images and Default Pinterest Text", 'social-pug' ); ?></h4>
+		<h4 style="text-align: left; padding: 15px;"><span class="dashicons dashicons-format-image" style="margin-right: 10px;"></span><?php echo __( "Single Post Pinterest Hidden Images and Default Pinterest Text", 'social-pug' ); ?></h4>
 
 		<div style="padding: 0 15px;">
 
@@ -20,8 +20,8 @@
 		</div>
 
 		<div class="dpsp-tool-actions" style="border-top: 1px solid #f1f1f1; padding: 15px;">
-		
-			<a onclick="return confirm( '<?php echo __( 'Are you sure you want to migrate all individual Pinterest hidden images and the default Pinterest text set for your posts from Tasty Pins to Grow by Mediavine?', 'social-pug' ); ?>' );" href="<?php echo wp_nonce_url( remove_query_arg( array( 'message' ), add_query_arg( array( 'dpsp_action' => 'migrate_hidden_images_tp' ) ) ), 'dpsp_migrate_hidden_images_tp', 'dpsp_token' ); ?>" class="button-primary"><?php echo __( 'Migrate Single Post Data', 'social-pug' ); ?></a>
+
+			<a onclick="return confirm( '<?php echo __( 'Are you sure you want to migrate all individual Pinterest hidden images and the default Pinterest text set for your posts from Tasty Pins to Grow by Mediavine?', 'social-pug' ); ?>' );" href="<?php echo wp_nonce_url( remove_query_arg( array( 'message' ), add_query_arg( array( 'dpsp_action' => 'migrate_hidden_images_tp' ) ) ), 'dpsp_migrate_hidden_images_tp', 'dpsp_token' ); ?>" class="dpsp-button-primary"><?php echo __( 'Migrate Single Post Data', 'social-pug' ); ?></a>
 
 		</div>
 
@@ -32,7 +32,7 @@
 	<!-- Single Post Hidden Images and Pinterest description -->
 	<div class="dpsp-tool-wrapper">
 
-		<h4 style="text-align: left; padding: 15px;"><span class="dashicons dashicons-testimonial" style="margin-right: 10px;"></span><?php echo __( "Images Pin title, descriptions, and repin ID data", 'social-pug' ); ?></h4>
+		<h4 style="text-align: left; padding: 15px;"><span class="dashicons dashicons-format-status" style="margin-right: 10px;"></span><?php echo __( "Images Pin title, descriptions, and repin ID data", 'social-pug' ); ?></h4>
 
 		<div style="padding: 0 15px;">
 
@@ -45,8 +45,8 @@
 		</div>
 
 		<div class="dpsp-tool-actions" style="border-top: 1px solid #f1f1f1; padding: 15px;">
-		
-			<a onclick="return confirm( '<?php echo __( 'Are you sure you want to migrate all Pin information set for your images from Tasty Pins to Grow by Mediavine?', 'social-pug' ); ?>' );" href="<?php echo wp_nonce_url( remove_query_arg( array( 'message' ), add_query_arg( array( 'dpsp_action' => 'migrate_images_pin_data_tp' ) ) ), 'dpsp_migrate_images_pin_data_tp', 'dpsp_token' ); ?>" class="button-primary"><?php echo __( 'Migrate Image Pin Data', 'social-pug' ); ?></a>
+
+			<a onclick="return confirm( '<?php echo __( 'Are you sure you want to migrate all Pin information set for your images from Tasty Pins to Grow by Mediavine?', 'social-pug' ); ?>' );" href="<?php echo wp_nonce_url( remove_query_arg( array( 'message' ), add_query_arg( array( 'dpsp_action' => 'migrate_images_pin_data_tp' ) ) ), 'dpsp_migrate_images_pin_data_tp', 'dpsp_token' ); ?>" class="dpsp-button-primary"><?php echo __( 'Migrate Image Pin Data', 'social-pug' ); ?></a>
 
 		</div>
 
